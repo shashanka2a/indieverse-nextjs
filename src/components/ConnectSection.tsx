@@ -8,7 +8,7 @@ export function ConnectSection() {
     {
       icon: Instagram,
       label: 'Instagram',
-      href: 'https://instagram.com',
+      href: 'https://instagram.com/indieverse.art',
       username: '@indieverse.art',
     },
     {
