@@ -141,7 +141,7 @@ export default function App() {
             >
               <FilmCard
                 title="The Beautiful Distance"
-                director="Ava Chen"
+                director="Shashank Jagannatham"
                 description="An intimate exploration of human connection and the spaces between us"
                 imageSrc="/TBD.png"
                 readNowUrl="https://gemini.google.com/share/faf79ef1ee0e"
@@ -159,7 +159,7 @@ export default function App() {
             >
               <FilmCard
                 title="Shoreline"
-                director="Emma Larsson"
+                director="Shashank Jagannatham"
                 description="A contemplative journey along forgotten coasts, exploring themes of memory and solitude"
                 imageSrc="/shoreline.png"
                 readNowUrl="https://gemini.google.com/share/a7e181b83672"
