@@ -9,12 +9,12 @@ interface FilmCardProps {
   title: string;
   director: string;
   description: string;
-  imageQuery: string;
+  imageSrc: string;
+  readNowUrl?: string;
   featured?: boolean;
 }
 
-export function FilmCard({ title, director, description, imageQuery, featured = false }: FilmCardProps) {
-  const [imageUrl, setImageUrl] = useState<string>('');
+export function FilmCard({ title, director, description, imageSrc, readNowUrl, featured = false }: FilmCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -33,17 +33,9 @@ export function FilmCard({ title, director, description, imageQuery, featured = 
         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
       >
         <ImageWithFallback
-          src={`https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=1200&fit=crop&q=80`}
+          src={imageSrc}
           alt={title}
           className="w-full h-full object-cover"
-          onLoad={(e) => {
-            // Lazy load actual image
-            const img = e.currentTarget;
-            if (!imageUrl) {
-              fetch(`/api/unsplash?query=${encodeURIComponent(imageQuery)}`)
-                .catch(() => {});
-            }
-          }}
         />
         
         {/* Gradient Overlay */}
@@ -88,11 +80,20 @@ export function FilmCard({ title, director, description, imageQuery, featured = 
             }}
             transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <Button
-              className="bg-[#FFC066] hover:bg-[#FFB04D] text-black rounded-2xl px-8 transition-all duration-400"
-            >
-              Read More
-            </Button>
+            {readNowUrl ? (
+              <Button
+                onClick={() => window.open(readNowUrl, '_blank')}
+                className="bg-[#FFC066] hover:bg-[#FFB04D] text-black rounded-2xl px-8 transition-all duration-400"
+              >
+                Read Now
+              </Button>
+            ) : (
+              <Button
+                className="bg-[#FFC066] hover:bg-[#FFB04D] text-black rounded-2xl px-8 transition-all duration-400"
+              >
+                Read More
+              </Button>
+            )}
           </motion.div>
         </motion.div>
       </div>

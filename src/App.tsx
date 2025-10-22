@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Instagram, Mail } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from './components/ui/button';
 import { FilmCard } from './components/FilmCard';
 import { ConnectSection } from './components/ConnectSection';
@@ -14,6 +15,27 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-6">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex items-center space-x-3"
+          >
+            <Image
+              src="/favicon.svg"
+              alt="Indieverse.art Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8"
+            />
+            <span className="font-serif text-xl text-white">Indieverse.art</span>
+          </motion.div>
+        </div>
+      </header>
+
       {/* Gradient Background */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-radial from-[#181818] via-[#0E0E0E] to-[#0E0E0E]" />
@@ -120,8 +142,9 @@ export default function App() {
               <FilmCard
                 title="The Beautiful Distance"
                 director="Ava Chen"
-                description="A meditation on solitude and connection in the digital age, following a photographer's journey across forgotten landscapes."
-                imageQuery="lonely photographer landscape"
+                description="An intimate exploration of human connection and the spaces between us"
+                imageSrc="/TBD.png"
+                readNowUrl="https://gemini.google.com/share/faf79ef1ee0e"
                 featured={true}
               />
             </motion.div>
@@ -137,8 +160,9 @@ export default function App() {
               <FilmCard
                 title="Shoreline"
                 director="Emma Larsson"
-                description="A quiet study of memory and belonging set against the backdrop of a remote coastal village where the tide carries forgotten stories."
-                imageQuery="coastal shoreline sunset"
+                description="A contemplative journey along forgotten coasts, exploring themes of memory and solitude"
+                imageSrc="/shoreline.png"
+                readNowUrl="https://gemini.google.com/share/a7e181b83672"
                 featured={true}
               />
             </motion.div>
@@ -152,15 +176,24 @@ export default function App() {
       {/* Footer */}
       <footer className="relative px-4 md:px-8 py-16 border-t border-white/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-[#CFCFCF] text-sm"
+            className="flex items-center space-x-3"
           >
-            Indieverse.art — Celebrating Independent Cinema
-          </motion.p>
+            <Image
+              src="/favicon.svg"
+              alt="Indieverse.art Logo"
+              width={24}
+              height={24}
+              className="w-6 h-6"
+            />
+            <p className="text-[#CFCFCF] text-sm">
+              Indieverse.art — Celebrating Independent Cinema
+            </p>
+          </motion.div>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
