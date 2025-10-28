@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://indieverse.art/sitemap.xml
+Sitemap: https://indieverse.mov/sitemap.xml

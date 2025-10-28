@@ -26,12 +26,12 @@ export default function App() {
           >
             <Image
               src="/favicon.svg"
-              alt="Indieverse.art Logo"
+              alt="Indieverse.mov Logo"
               width={32}
               height={32}
               className="w-8 h-8"
             />
-            <span className="font-serif text-xl text-white">Indieverse.art</span>
+            <span className="font-serif text-xl text-white">Indieverse.mov</span>
           </motion.div>
         </div>
       </header>
@@ -56,7 +56,7 @@ export default function App() {
             className="space-y-4"
           >
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight">
-              Indieverse.art
+              Indieverse.mov
             </h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -185,13 +185,13 @@ export default function App() {
           >
             <Image
               src="/favicon.svg"
-              alt="Indieverse.art Logo"
+              alt="Indieverse.mov Logo"
               width={24}
               height={24}
               className="w-6 h-6"
             />
             <p className="text-[#CFCFCF] text-sm">
-              Indieverse.art — Celebrating Independent Cinema
+              Indieverse.mov — Celebrating Independent Cinema
             </p>
           </motion.div>
           <motion.p

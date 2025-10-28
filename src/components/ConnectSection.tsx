@@ -8,14 +8,14 @@ export function ConnectSection() {
     {
       icon: Instagram,
       label: 'Instagram',
-      href: 'https://instagram.com/indieverse.art',
-      username: '@indieverse.art',
+      href: 'https://instagram.com/indieverse.mov',
+      username: '@indieverse.mov',
     },
     {
       icon: Mail,
       label: 'Email',
-      href: 'mailto:hello@indieverse.art',
-      username: 'hello@indieverse.art',
+      href: 'mailto:hello@indieverse.mov',
+      username: 'hello@indieverse.mov',
     },
   ];
 
