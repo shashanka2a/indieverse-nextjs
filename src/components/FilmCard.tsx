@@ -12,15 +12,22 @@ interface FilmCardProps {
   imageSrc: string;
   readNowUrl?: string;
   featured?: boolean;
+  square?: boolean;
 }
 
-export function FilmCard({ title, director, description, imageSrc, readNowUrl, featured = false }: FilmCardProps) {
+export function FilmCard({ title, director, description, imageSrc, readNowUrl, featured = false, square = false }: FilmCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+
+  const getAspectRatio = () => {
+    if (square) return '1/1';
+    if (featured) return '21/9';
+    return '4/5';
+  };
 
   return (
     <motion.div
       className="group relative overflow-hidden rounded-2xl bg-[#1A1A1A] cursor-pointer"
-      style={{ aspectRatio: featured ? '21/9' : '4/5' }}
+      style={{ aspectRatio: getAspectRatio() }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{ scale: 1.02 }}

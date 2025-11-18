@@ -142,10 +142,10 @@ export default function App() {
               <FilmCard
                 title="The Beautiful Distance"
                 director="Shashank Jagannatham"
-                description="An intimate exploration of human connection and the spaces between us"
+                description="Beautiful distance is a compelling romantic drama set against the backdrop of the high-stakes US tech industry (Seattle/San Jose). It tells the story of Arjun, a brilliant, perpetually under-resourced tech enthusiast juggling an F-1 visa and a dream of securing VC funding, and Anjali, a sharp, highly accomplished Program Manager shielded by the coveted stability of an H-1B visa. Their relationship is not a classic opposites-attract story, but a collision between two incompatible timelines: one built on speculative dreams and one built on absolute deadlines. The real distance, the doori, is not geographic, but the immense, practical gap between an F-1 student's financial precarity and a high-salaried manager's professional pressure, forcing them to choose between love and the hard-won security of the American Dream."
                 imageSrc="/TBD.png"
                 readNowUrl="https://gemini.google.com/share/faf79ef1ee0e"
-                featured={true}
+                square={true}
               />
             </motion.div>
 
@@ -160,7 +160,7 @@ export default function App() {
               <FilmCard
                 title="Shoreline"
                 director="Shashank Jagannatham"
-                description="A contemplative journey along forgotten coasts, exploring themes of memory and solitude"
+                description="Jason, a studious and isolated college student, joins his adventurous friends on a spontaneous road trip to Miami. Overwhelmed by the chaos of the city, he seeks solitude at dawn on the shoreline—where he confronts an alligator and, in a flash of mortality, the unlived memories of family and friendship. Surviving the encounter, Jason embraces life, reconnecting with his friends as the sun sets. Shoreline is an AI-crafted cinematic short that blends realism, suspense, and emotional depth—challenging us to ask: Are we living, or just existing?"
                 imageSrc="/shoreline.png"
                 readNowUrl="https://gemini.google.com/share/a7e181b83672"
                 featured={true}
