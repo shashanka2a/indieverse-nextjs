@@ -117,26 +117,27 @@ export default function App() {
       </motion.section>
 
       {/* Films Section */}
-      <section className="relative px-4 md:px-8 py-16 md:py-20">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative px-4 md:px-8 py-24 md:py-32">
+        <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="font-serif text-3xl md:text-4xl mb-12 text-center"
+            className="font-serif text-4xl md:text-5xl mb-16 text-center"
           >
             Featured Films
           </motion.h2>
 
           {/* Bento Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-            {/* The Beautiful Distance */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {/* Featured Large Card - The Beautiful Distance */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="md:col-span-2"
             >
               <FilmCard
                 title="The Beautiful Distance"
@@ -144,16 +145,17 @@ export default function App() {
                 description="Beautiful distance is a compelling romantic drama set against the backdrop of the high-stakes US tech industry (Seattle/San Jose). It tells the story of Arjun, a brilliant, perpetually under-resourced tech enthusiast juggling an F-1 visa and a dream of securing VC funding, and Anjali, a sharp, highly accomplished Program Manager shielded by the coveted stability of an H-1B visa. Their relationship is not a classic opposites-attract story, but a collision between two incompatible timelines: one built on speculative dreams and one built on absolute deadlines. The real distance, the doori, is not geographic, but the immense, practical gap between an F-1 student's financial precarity and a high-salaried manager's professional pressure, forcing them to choose between love and the hard-won security of the American Dream."
                 imageSrc="/TBD.png"
                 readNowUrl="https://gemini.google.com/share/faf79ef1ee0e"
-                square={true}
+                featured={true}
               />
             </motion.div>
 
             {/* Shoreline */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="md:col-span-2"
             >
               <FilmCard
                 title="Shoreline"
@@ -161,7 +163,7 @@ export default function App() {
                 description="Jason, a studious and isolated college student, joins his adventurous friends on a spontaneous road trip to Miami. Overwhelmed by the chaos of the city, he seeks solitude at dawn on the shoreline—where he confronts an alligator and, in a flash of mortality, the unlived memories of family and friendship. Surviving the encounter, Jason embraces life, reconnecting with his friends as the sun sets. Shoreline is an AI-crafted cinematic short that blends realism, suspense, and emotional depth—challenging us to ask: Are we living, or just existing?"
                 imageSrc="/shoreline.png"
                 readNowUrl="https://gemini.google.com/share/a7e181b83672"
-                square={true}
+                featured={true}
               />
             </motion.div>
           </div>
